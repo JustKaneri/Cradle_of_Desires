@@ -52,7 +52,7 @@ BtnNex.onclick = function(){
     	ProjectName.classList.remove("animation_text");
     	ProjectImage.classList.remove('anim_next_image');
 
-    	document.documentElement.style.setProperty("--image",'');
+    	//document.documentElement.style.setProperty("--image",'');
 
   	}, 650);
 }
@@ -84,7 +84,7 @@ BtnPrevios.onclick = function(){
     	ProjectName.classList.remove("animation_text");
     	ProjectImage.classList.remove('anim_previous_image');
 
-    	document.documentElement.style.setProperty("--image",'');
+    	//document.documentElement.style.setProperty("--image",'');
 
   	}, 650);
 }
