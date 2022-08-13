@@ -1,28 +1,99 @@
 .title-projects{
-	padding-top: 3%;
+	padding-top: 5%;
 	padding-left: 5%;
 }
 
 .informative__projects{
 	height: auto;
+	overflow: hidden;
 }
 
 .projects{
 	margin-top: 2%;
 	width: 100%;
 	height:  100vh;
-	background-image:  linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/Bookshelf.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	transition: background 0.5s ease;
+	overflow: hidden;
+}
+
+.image{
+	width: 100%;
+	height:  100vh;
+	z-index: 1;
+	position: absolute;
+
+	background: linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/Bookshelf.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.image::before{
+	content: '';
+	background: var(--image);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height:  100vh;
+	transform: translate(-100vw,0%);
+}
+
+.image::after{
+	content: '';
+	background: var(--image);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height:  100vh;
+	transform: translate(100vw, 0%);
+}
+
+.img{
+	--image: linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/Bookshelf.svg);
+}
+
+.anim_next_image{
+	animation: next_image 0.65s;
+}
+
+@keyframes next_image{
+	  
+	  50%,
+	  55% {
+	    transform: translate(100vw,0);
+	  }
+	  to {
+	    transform: translate(100vw,0)
+	  }
+}
+
+.anim_previous_image{
+	animation: prev_image 0.65s;
+}
+
+@keyframes prev_image{
+	  
+	  50%,
+	  55% {
+	    transform: translate(-100vw, 0%);
+	  }
+	  to {
+	    transform: translate(-100vw, 0%)
+	  }
 }
 
 .btn-show{
-	position: absolute;;
+	position: absolute;
+	z-index: 2;
 }
 
 #next-option {
@@ -54,6 +125,7 @@
 	margin: 0;
 	width: 70%;
     text-align: center;
+    z-index: 2;
 }
 
 .project__link{
@@ -77,4 +149,27 @@
 		width: 3em;
         height: 3em;
 	}
+}
+
+
+.animation_text{
+
+	animation: spawn 0.65s;
+}
+
+
+@keyframes spawn{
+
+  0% {
+    transform:  scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform:  scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform:  scale(1);
+    opacity: 1;
+  }
 }

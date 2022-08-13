@@ -28,7 +28,12 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 3;
+}
 
+.nav-panel-scroll{
+	position: fixed;
+	background-color:  #242052;
 }
 
 .list{
@@ -52,6 +57,11 @@ body{
 	text-decoration: none;
 	font-size: 1.5em;
 }
+
+.item__link-scroll{
+	color: white;
+}
+
 
 .main-page__title{
 	color: white;
