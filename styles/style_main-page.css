@@ -1,0 +1,84 @@
+body{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.main-page{
+	width: 100%;
+	height: 100vh;
+	background-image: url("../images/Main_Background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.nav-panel{
+	position: absolute;
+	top: 0;
+	background-color: white;
+	width: 100%;
+	height: 7vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.list{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.list__item{
+	width: 25%;
+	text-align: center;
+	display: inline
+}
+
+.item__link{
+	color: #242052;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+.main-page__title{
+	color: white;
+	font-size: 8em;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.main-page__sub-title{
+	color: white;
+	font-size: 3em;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 760px){
+
+	.item__link{
+		font-size:1em;
+	}
+
+	.main-page__title{
+		font-size: 4em;
+	}
+
+	.main-page__sub-title{
+		font-size: 1.5em;
+	}
+}

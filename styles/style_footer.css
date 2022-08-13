@@ -1,0 +1,44 @@
+.lower-block
+{
+	color: white;
+	position: absolute;
+	height: 10%;
+	width: 100%;
+  	background-color: #0B0917;
+}
+
+
+
+.autor-title
+{
+	font-size: 1.2em;
+	position:absolute;
+	bottom: 0;
+	left: 2em;
+	text-align: left;
+	float: left;
+}
+
+.link__images
+{
+	opacity: 60%;
+	position: absolute;
+	bottom: 1.5em;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.link__images:hover
+{
+	opacity: 100%;
+}
+
+.link__github
+{
+	right: 2em;
+}
+
+.link__twitter
+{
+	right: 5em;
+}
