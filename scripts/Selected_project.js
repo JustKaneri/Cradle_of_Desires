@@ -38,9 +38,9 @@ BtnNex.onclick = function(){
 		Index = 0;
 	}
 
-	ProjectName.classList.add("animation_text");
-	ProjectImage.classList.add('anim_next_image');
 	document.documentElement.style.setProperty("--image", "linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/"+ImageNameArray[Index]+")  center center / cover no-repeat ");	
+	ProjectName.classList.add("animation_text");
+	ProjectImage.classList.add('anim_next_image');	
 
 	setTimeout(() => {
 
@@ -78,9 +78,11 @@ BtnPrevios.onclick = function(){
 		Index = NameProjectArray.length-1;
 	}
 
+	document.documentElement.style.setProperty("--image", "linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/"+ImageNameArray[Index]+")  center center / cover no-repeat ");	
+	
 	ProjectName.classList.add("animation_text");
 	ProjectImage.classList.add('anim_previous_image');
-	document.documentElement.style.setProperty("--image", "linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(../images/Projects/"+ImageNameArray[Index]+")  center center / cover no-repeat ");	
+	
 
 	setTimeout(() => {
 		
