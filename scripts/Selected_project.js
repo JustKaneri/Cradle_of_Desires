@@ -25,8 +25,13 @@ const ProjectName = document.getElementsByClassName('project__link')[0];
 
 var Index = 0;
 
+PreLoadImage();
+
 BtnNex.onclick = function(){
 
+	BtnNex.disabled = true;
+	BtnPrevios.disabled = true;
+	
 	Index++;
 
 	if(Index >= NameProjectArray.length){
@@ -54,10 +59,18 @@ BtnNex.onclick = function(){
 
     	//document.documentElement.style.setProperty("--image",'');
 
+    	BtnNex.disabled = false;
+		BtnPrevios.disabled = false;
+    	
+
   	}, 650);
 }
 
 BtnPrevios.onclick = function(){
+
+	BtnNex.disabled = true;
+	BtnPrevios.disabled = true;
+
 
 	Index--;
 
@@ -86,5 +99,18 @@ BtnPrevios.onclick = function(){
 
     	//document.documentElement.style.setProperty("--image",'');
 
+    	BtnNex.disabled = false;
+		BtnPrevios.disabled = false;
+
   	}, 650);
+}
+
+
+function PreLoadImage(){
+
+	for(var i = 0; i < NameProjectArray.length; i++){
+		ProjectImage.style.background = "linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(./images/Projects/"+ImageNameArray[i]+")  center center / cover no-repeat ";
+	}
+
+	ProjectImage.style.background = "linear-gradient(0deg, rgba(11, 9, 23, 0.6) 0.64%, rgba(36, 32, 82, 0.6) 100%),url(./images/Projects/"+ImageNameArray[0]+")  center center / cover no-repeat ";
 }
