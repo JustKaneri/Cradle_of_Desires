@@ -2,20 +2,23 @@ const NameProjectArray = ['Bookshelf',
 						 'Random Wallpaper',
 						 'Manga Parser',
 						 'DBMS Hotel',
-						 '2048'];
+						 '2048',
+						 'Customization Yandex'];
 
 const LinkProjectArray = ['https://github.com/JustKaneri/Bookshelf',
 						 'https://github.com/JustKaneri/RandomWallpaper',
 						 'https://github.com/JustKaneri/MangaParser',
 						 'https://github.com/JustKaneri/Hotel',
-						 'https://github.com/JustKaneri/Web_2048'];
+						 'https://github.com/JustKaneri/Web_2048',
+						 'https://github.com/JustKaneri/Customization-Yandex'];
 
 
 const ImageNameArray = ['Bookshelf.svg',
 					   'RandomWallpaper.svg',
 					   'MangaParser.svg',
 					   'Hotel.svg',
-					   '2048.svg'];
+					   '2048.svg',
+					   'Customization_Yandex.svg'];
 
 const BtnNex = document.getElementById('next-option');
 const BtnPrevios = document.getElementById('previous-option');
